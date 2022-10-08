@@ -6,20 +6,21 @@ Serialized ML docs
    The documentation is not finished yet (for any version...also the project is not even in an alfa stage).
    However, the basic idea has been laid out along with a :doc:`list of to dos <todos>`.
 
+
 A "cookie cutter"-style project which provides templates to common machine
 learning tasks which are serialized into yaml configuration files. Based largely
 on tools by Iterative.
 
-Currently limited to tabular data and scikit-learn compatible models. See the README.md on GitHub
-for other planned/considered features.
+Currently limited to tabular data and scikit-learn compatible models. See the TODOs below
+for other currently considered features.
 
 The aim is to provide an alternative to AutoML frameworks which are very inflexible
 and almost always come with a vendor lock-in. This way, templace can be used like AutoML
 if desired, but they can be broken down and modified easily as well...or some parts can be
 replaced, not forcing the user to use same framework for the entire  ML workflow.
 
-It could also serve as a basis for databricks accelerator-like collection of ML recipes,
-but fully open source, ready to production and using gitops practices.
+It could also serve as a basis for a collection of ML recipes,
+which are fully open source, ready to production and using gitops practices.
 
 Scope
 -----
