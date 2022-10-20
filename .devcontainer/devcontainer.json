@@ -10,6 +10,11 @@
 			"USERNAME": "${localEnv:USER}"
 		}
 	},
+
+	// set up non-default hooks (these will allow DVC to operate seamlessly with just git commands)
+	// install the package in editable mode for local development
+	"postAttachCommand": "pre-commit install --hook-type pre-push --hook-type post-checkout --hook-type pre-commit",
+	"postCreateCommand": "python -m pip install -e .",
 	// Sets the run context to one level up instead of the .devcontainer folder.
 	"context": "..",
 	// Set *default* container specific settings.json values on container create.

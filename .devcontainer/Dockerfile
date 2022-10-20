@@ -65,8 +65,6 @@ RUN python -m pip install -r requirements.txt
 # (optional) installs jupyter and similar tools
 RUN python -m pip install -r requirements-dev.txt
 
-# TODO: Figure out a way to run this as RUN
-# set up non-default hooks (these will allow DVC to operate seamlessly with just git commands)
-# install the package in editable mode for local development
-CMD pre-commit install --hook-type pre-push --hook-type post-checkout --hook-type pre-commit \
-    && python -m pip install -e .
+RUN mkdir -p /tmp/throwaway
+COPY .pre-commit-config.yaml /tmp/throwaway
+RUN cd /tmp/throwaway && git init . && pre-commit install-hooks && rm -rf .git
